@@ -9,8 +9,8 @@ const Protected = (props) => {
   
 
   useEffect(() => {
-       if(!isLoggedIn){           
-    if(loading){
+   if(!isLoggedIn){           
+       if(!loading){
           navigate("/login");
 
         }

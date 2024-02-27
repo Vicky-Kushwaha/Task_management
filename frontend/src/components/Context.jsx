@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({children}) => {
 
  const[token,setToken] = useState(localStorage.getItem("token"));
-  const[loading,setLoading] = useState(true);
+  const[loading,setLoading] = useState(false);
  const[task,setTask] = useState("");
  const[user,setUser] = useState("");
 
@@ -21,7 +21,7 @@ export const AuthProvider = ({children}) => {
 // removing token from localstorage
  const LogoutUser = () => {
    setToken("");
-    setLoading(true);
+    setLoading(false);
    return localStorage.removeItem("token");
  }
 
@@ -29,6 +29,7 @@ export const AuthProvider = ({children}) => {
  // JWT authentication - to get the currently loggedIn user data 
  
  const userAuthentication = async() => {
+   setLoading(true);
    try{
    
     const response = await fetch(`http://localhost:5000/api/auth/getTask`,{
@@ -43,16 +44,17 @@ export const AuthProvider = ({children}) => {
       const {tasks,user} = data;
       setTask(tasks);
       setUser(user);
-    
+      setLoading(false);
+          
     }else{
       setLoading(false);
       console.log("Error fetching user data");
     }
      
-     setLoading(false);  
      
    }catch(error){
-        console.error(error);
+     console.error(error);
+     setLoading(false);  
    }
 
  }

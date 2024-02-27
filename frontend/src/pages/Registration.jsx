@@ -1,4 +1,3 @@
-import "../components/css/registration.css";
 import {useState} from "react";
 import { toast } from 'react-toastify';
 import {useAuth} from "../components/Context";
@@ -64,32 +63,32 @@ const Registration = () => {
 
 	return(
       <>
-      	<section>
+      	<section className=" flex  h-[calc(100vh-4rem)] items-center justify-center ">
       		
-            <div className= "regis_container">
-                <h3 className="text-bold text-2xl text-center">Sign Up</h3>
+           <div className= "shadow-[0_0px_5px_rgba(0,0,0,0.3)] rounded-lg p-2 m-2 h-60">
+                <h3 className="text-bold text-2xl text-center font-bold mb-2">Sign Up</h3>
             	<form onSubmit={handleSubmit}>
             		 
-            		 <div className="inp_container">
-            		 	<label htmlFor="name">Name:</label>
-            		 	<input type="text" name="name" id="name"  autoComplete="off" onChange={onChange} value={userValue.name}/>
+                    <div className=" flex justify-between">
+            		 	<label  className="label" htmlFor="name">Name:</label>
+            		 	<input className="input" type="text" name="name" id="name"  autoComplete="off" onChange={onChange} value={userValue.name}/>
             		 </div>
 
-            		  <div className="inp_container">
-            		 	<label htmlFor="email">Email:</label>
-            		 	<input type="text" name="email" id="email" autoComplete="off" onChange={onChange} value={userValue.email}/>
+                    <div className="flex justify-between">
+            		 	<label className="label" htmlFor="email">Email:</label>
+            		 	<input className="input" type="text" name="email" id="email" autoComplete="off" onChange={onChange} value={userValue.email}/>
             		 </div>
 
-                     <div className="inp_container">
-            		 	<label htmlFor="password">Password:</label>
-            		 	<input type="text" name="password" id="password" autoComplete="off" onChange={onChange} value={userValue.password}/>
+                    <div className="flex justify-between">
+            		 	<label className="label" htmlFor="password">Password:</label>
+            		 	<input className="input" type="text" name="password" id="password" autoComplete="off" onChange={onChange} value={userValue.password}/>
             		 </div>
 
-            		 <div className="inp_container">
-            		 	<input type="submit" value="Sign Up" />
+                   <div className="text-center">
+            		 <input className="bg-blue-600 text-white px-2 py-1 m-1 rounded-lg" type="submit" value="Sign Up" />
             		 </div>
-                 <p style={{textAlign:"center"}}>Already have account ? 
-             <span onClick={()=> navigate("/login")} style={{color:"blue",cursor:"pointer"}} >  signIn</span></p>
+                 <p className="text-center">Already have account ? 
+             <span onClick={()=> navigate("/login")} className="text-blue-600 cursor-pointer" >  signIn</span></p>
 
             	</form>
             </div>

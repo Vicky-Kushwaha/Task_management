@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input{
+  @apply shadow-[inset_0_0px_2px_rgba(0,0,0,0.3)] outline-none p-1 m-1 rounded-md w-60
+}
+
+.label{
+	@apply w-[6rem] font-bold 
+}
+
+.no-scrollbar::-webkit-scrollbar{
+	display:none;
+}
