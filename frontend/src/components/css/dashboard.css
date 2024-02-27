@@ -1,0 +1,165 @@
+.task_container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.task_input{
+	display: flex;
+	margin: 0.2rem;
+
+}
+
+.task_input label{
+	width: 6rem;
+	font-weight: 600;
+}
+
+
+.task_input input{
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4);
+	width: 14.5rem;
+	margin: 0.2rem;
+	padding: 0.2rem;
+	border-radius: 5px;
+	outline: none;
+}
+
+.task_input textarea{
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4);
+	width: 14.5rem;
+	margin: 0.2rem;
+	padding: 0.2rem;
+	border-radius: 5px;
+	outline: none;
+}
+
+
+.task_input input[type="submit"]{
+	width: 5rem;
+	background: blue;
+	color: white;
+	padding: 0.4rem;
+	border-radius: 5px;
+	margin: 0.2rem auto;
+	cursor: pointer;
+}
+
+.task_form{
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4);
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 10px;
+}
+
+
+
+.data_container{
+	height: 40vh;
+	margin: 0.5rem;
+	overflow: auto;
+
+}
+
+.data_container::-webkit-scrollbar{
+	display: none;
+}
+
+.data_container table{
+	width: 95%;
+	margin: 0.1rem auto;
+}
+
+.data_container table thead{
+	background-color: gray;
+	color: white;
+}
+
+.data_container table thead th{
+	padding: 0.4rem;
+}
+
+.data_container table tbody{
+   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.data_container table tbody tr td{
+   text-align: center;
+   font-size: 1.1rem;
+   padding: 0.5rem;
+   text-transform: capitalize;
+}
+
+.action{
+	display: flex;
+	justify-content: center;
+}
+
+
+.action div{
+	margin: 0.1rem auto;
+	cursor: pointer;
+}
+
+
+.modal{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.cutIcon{
+	position: absolute;
+	top: 1rem;
+	right: 1.5rem;
+	border-radius: 50%;
+}
+
+.cutIcon:hover {
+	background-color: red;
+	color: white;
+	cursor: pointer;
+}
+
+
+.task_data_container{
+	width: 30vw;
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+.task_data{
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.task_data div span{
+	display: inline-block;
+	width: 6rem;
+	margin-right: 2rem;
+	color: brown;
+	font-weight: 500;
+}
+
+
+@media screen and (max-width: 500px) {
+ 
+
+ .task_container{
+    margin: 1.8rem 0.1rem;
+ }
+
+  .task_data_container{
+	width: 80vw;
+}
+
+}
