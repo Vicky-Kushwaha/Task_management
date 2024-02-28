@@ -76,7 +76,7 @@ const Login = () => {
             		 </div>
 
             		 <div className="text-center">
-                        <input className="bg-blue-600 text-white px-2 py-1 m-1 rounded-lg" type="submit" value="Sign In" />
+                        <input className="bg-blue-600 text-white px-2 py-1 m-1 rounded-lg cursor-pointer" type="submit" value="Sign In" />
                      </div>
              <p className="text-center">Don't have account ? 
              <span onClick={()=> navigate("/")} className="text-blue-600 cursor-pointer" >  signUp</span></p>

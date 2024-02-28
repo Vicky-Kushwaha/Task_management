@@ -14,7 +14,7 @@ const taskSchema = new Schema({
    
   description: String,
 
-  dueDate: String,
+  dueDate: Date,
 
   userEmail:{
   	type: String,

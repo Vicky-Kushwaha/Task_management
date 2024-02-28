@@ -14,6 +14,7 @@ const {task,isLoggedIn,user,userAuthentication} = useAuth();
  const navigate = useNavigate();
 const[selectedTask,setSelectedTask] = useState(null);
 const[edit,setEdit] = useState(false);
+const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
 const[taskModal,setTaskModal] = useState(false);
 const[taskValue,setTaskValue] = useState({
 	title:"",
@@ -226,7 +227,7 @@ if(edit){
                    
                       <div className="flex justify-between">
                          	<label className="label" htmlFor="dueDate">Due Date :</label>
-                         	<input className="input" type="text" name="dueDate" id="dueDate" autoComplete="off"  onChange={onChange} value={edit ? selectedTask.dueDate :taskValue.dueDate}/>
+                         	<input className="input" type="date" name="dueDate" id="dueDate" autoComplete="off"  onChange={onChange} value={edit ? selectedTask.dueDate :taskValue.dueDate}/>
                          </div>
 
                       <div className="flex justify-between">
@@ -259,7 +260,7 @@ if(edit){
 
                        <tr className="text-center">
                         <td className="p-2">{elem.title}</td>
-                        <td className="p-2">{elem.dueDate}</td>
+                        <td className="p-2">{new Date(elem.dueDate).toLocaleDateString('en-GB', options)}</td>
                         <td className="p-2">{elem.status}</td>
                         <td className="action flex p-2 justify-between">
                         <div className="cursor-pointer">{ (elem.status === "pending") ? <DoneIcon onClick={() => setStatus(elem)} /> : <CloseIcon onClick={() => setStatus(elem)} />  }</div>

@@ -85,7 +85,7 @@ const Registration = () => {
             		 </div>
 
                    <div className="text-center">
-            		 <input className="bg-blue-600 text-white px-2 py-1 m-1 rounded-lg" type="submit" value="Sign Up" />
+            		 <input className="bg-blue-600 text-white px-2 py-1 m-1 rounded-lg cursor-pointer" type="submit" value="Sign Up" />
             		 </div>
                  <p className="text-center">Already have account ? 
              <span onClick={()=> navigate("/login")} className="text-blue-600 cursor-pointer" >  signIn</span></p>
