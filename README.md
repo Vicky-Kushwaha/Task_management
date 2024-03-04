@@ -6,7 +6,7 @@ This task management system facilitates task management with a user-specific log
 
 1) First clone this repositry by copying the below command to your local computer.
 
- https://github.com/Vicky-Kushwaha/Task_management.git  
+   https://github.com/Vicky-Kushwaha/Task_management.git  
 
 3) Open terminal  and navigate to backend folder.
 
